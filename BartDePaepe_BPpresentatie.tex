@@ -65,19 +65,23 @@
 \begin{frame}
   \frametitle{Vlaams Instituut voor de Zee}
   \begin{figure}
-      \caption{website url: \url{https://www.vliz.be}}
-      
-      \includegraphics[height=.4\textheight]
+     \includegraphics[height=.4\textheight]
       {kader/VLIZ_LOGO.png}
       % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-      \label{img:voorbeeld}
+      
   \end{figure}
+  \centering
+  \url{https://www.vliz.be}
   
 \end{frame}
 
 \begin{frame}
     \frametitle{Integrated Marine Information System}
-    \href{https://www.vliz.be/nl/imis}{Raadpleeg IMIS}
+    \href{https://www.vliz.be/nl/imis}{\begin{figure}
+            \includegraphics[height=.4\textheight]
+            {kader/imis.jpg}
+            % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+    \end{figure}}
     
     
 \end{frame}
@@ -88,24 +92,26 @@
         % create the column with the first image, that occupies
         % half of the slide
         \begin{column}{.5\textwidth}
+            \centering
     \begin{figure}
-        \caption{zoekopdracht}
-        
         \includegraphics[height=.5\textheight]
         {kader/google-scholar/2_zoekresultaten.PNG}
         % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-        \label{img:voorbeeld}
+        
     \end{figure}
+    zoekopdracht
     \end{column}
     \begin{column}{.5\textwidth}
+        \centering
     \begin{figure}
-        \caption{alert}
+        
         
         \includegraphics[height=.5\textheight]
         {kader/google-scholar/5_email.PNG}
         % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-        \label{img:voorbeeld}
+        
     \end{figure}
+    alert
 \end{column}
 \end{columns}
     
@@ -113,10 +119,11 @@
 \end{frame}
 
 {
-    \setbeamertemplate{background}[imgletter]%
-    {kader/amin-zabardast-Q57aftqNKiE-unsplash.jpg}{P}
-\begin{frame}
+    \setbeamertemplate{background}[pure]%
+    {kader/amin-zabardast-Q57aftqNKiE-unsplash.jpg}
+\begin{frame}[b]{Title}
     \frametitle{Het probleem.}
+    \tiny
     Photo by Amin Zabardast on https://unsplash.com/photos/a-street-sign-on-a-pole-next-to-a-building-Q57aftqNKiE
     
     
@@ -125,6 +132,7 @@
 
 \begin{frame}
     \frametitle{De onderzoeksvraag.}
+    \small
     ``Hoe kunnen de zoekresultaten van Google Scholar automatisch toegevoegd worden aan IMIS?''
     \begin{itemize}
         \item Hoe kunnen de uiteenlopende zoekresultaten van Google Scholar omgezet worden in gestructureerde data?
@@ -156,42 +164,44 @@
 \section{Methode.}
 }
 
-\begin{frame}
+\begin{frame}[t]
     \frametitle{Web scraping (1).}
-    \begin{columns}[c]
+    \begin{columns}[t]
         % create the column with the first image, that occupies
         % half of the slide
         \begin{column}{.5\textwidth}
             \begin{figure}
-                \caption{SERP}
                 
-                \includegraphics[height=.5\textheight]
+                
+                \includegraphics[height=1.5\textheight]
                 {methode/web-scraping/SERP.jpg}
                 % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-                \label{img:voorbeeld}
+                
             \end{figure}
+            
         \end{column}
         \begin{column}{.5\textwidth}
             \begin{figure}
-                \caption{HTML structuur}
                 
-                \includegraphics[height=.5\textheight]
+                
+                \includegraphics[height=.3\textheight]
                 {methode/web-scraping/serp-html.JPG}
                 % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-                \label{img:voorbeeld}
+                
             \end{figure}
+            
             \begin{listing}
                 \begin{lstlisting}
+                    \tiny
                     <h3 style="font-weight:normal;margin:0;font-size:17px;line-height:20px;">
                     <span style="fon...lign:2px">[HTML]</span>    
-                    <a href="https://www.s...8" class="gse_alrt_title" style="f...t:22px">
+                    <a href="https://www.s...8" \colorbox{hgorange}{class="gse\_alrt\_title"} style="f...t:22px">
                     The role of narcissistic personality <b>traits </b>in bullying behavior 
                     in adolescence–A systematic review and meta-analysis
                     </a>
                     </h3>
                 \end{lstlisting}
-                \caption[Prompt HTML fragment]{HTML fragment van de titel van een publicatie.}
-                \label{code:HTMLcodefragment}
+                
             \end{listing}
         \end{column}
     \end{columns}
@@ -211,12 +221,12 @@
 \end{column}
 \begin{column}{.5\textwidth}
     \begin{figure}
-        \caption{LLM kostprijs}
+        
         
         \includegraphics[height=.5\textheight]
         {methode/web-scraping/openai_billing.png}
         % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-        \label{img:voorbeeld}
+        
     \end{figure}
 \end{column}
 \end{columns}
@@ -240,25 +250,29 @@
     % create the column with the first image, that occupies
     % half of the slide
     \begin{column}{.5\textwidth}
+        \centering
         \begin{figure}
-            \caption{DOI}
+            
             
             \includegraphics[height=.5\textheight]
             {methode/linked-data/DOI_Link.jpg}
             % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-            \label{img:voorbeeld}
+            
         \end{figure}
+        DOI in de URL \& op de webpagina
         
 \end{column}
 \begin{column}{.5\textwidth}
+    \centering
     \begin{figure}
-        \caption{DOI}
+        
         
         \includegraphics[height=.5\textheight]
         {methode/linked-data/DOI_Crossref.jpg}
         % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-        \label{img:voorbeeld}
+        
     \end{figure}
+    DOI in Crossref
 \end{column}
 \end{columns}
 \end{frame}
@@ -269,16 +283,20 @@
     % create the column with the first image, that occupies
     % half of the slide
     \begin{column}{.5\textwidth}
+        \centering
         \begin{figure}
-            \caption{DOI}
+            
             
             \includegraphics[height=.5\textheight]
             {methode/linked-data/DOI_flow.jpg}
             % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-            \label{img:voorbeeld}
+            
         \end{figure}
+        flowchart om de DOI op te zoeken
     \end{column}
     \begin{column}{.5\textwidth}
+        \centering
+        verschillende types webpagina's
         \begin{itemize}
             \item een gewone HTML pagina
             \item een PDF document
@@ -288,37 +306,50 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[t]{Title}
 \frametitle{Semantic search (1).}
-\begin{columns}[c]
-    % create the column with the first image, that occupies
-    % half of the slide
-    \begin{column}{.5\textwidth}
-        
-                \begin{figure}
-                    \caption{Google Scholar zoekresultaat}
-                    
-                    \includegraphics[height=.5\textheight]
-                    {methode/semantic-search/schrimp.jpg}
-                    % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-                    \label{img:voorbeeld}
-                \end{figure}
-            
+\begin{minipage}[t][0.8715\textheight]{\textwidth}
+    \begin{columns}[c]
+        % create the column with the first image, that occupies
+        % half of the slide
+        \begin{column}{.5\textwidth}
+            \centering
+            Google Scholar zoekresultaat
+            \begin{figure}
                 
+                
+                \includegraphics[height=.5\textheight]
+                {methode/semantic-search/schrimp.jpg}
+                % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+                
+            \end{figure}
             
-    \end{column}
-    \begin{column}{.5\textwidth}
-        \begin{figure}
-            \caption{publicatie in IMIS}
             
-            \includegraphics[height=.5\textheight]
-            {methode/semantic-search/prawn.jpg}
-            % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-            \label{img:voorbeeld}
-        \end{figure}
-    \end{column}
-\end{columns}
-\url{https://www.youtube.com/watch?v=QSW2L8dkaZk}
+            
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \centering
+            publicatie in IMIS
+            \begin{figure}
+                
+                
+                \includegraphics[height=.5\textheight]
+                {methode/semantic-search/prawn.jpg}
+                % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+                
+            \end{figure}
+        \end{column}
+    \end{columns}
+    \url{https://www.youtube.com/watch?v=QSW2L8dkaZk}
+    
+    \vspace{\fill}% or \vfill
+    \tiny
+    Photo by Yasmine Duchesne on https://unsplash.com/photos/clear-footed-glass-with-red-and-yellow-liquid-on-table-VSb6KDaiga0
+    Photo by Farhad Ibrahimzade on https://unsplash.com/photos/cooked-food-on-black-ceramic-bowl-HNmcgpzPHag
+    
+    
+\end{minipage}
+
 \end{frame}
 
 \begin{frame}
