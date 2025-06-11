@@ -157,34 +157,286 @@
 }
 
 \begin{frame}
-    \frametitle{Web scraping.}
+    \frametitle{Web scraping (1).}
+    \begin{columns}[c]
+        % create the column with the first image, that occupies
+        % half of the slide
+        \begin{column}{.5\textwidth}
+            \begin{figure}
+                \caption{SERP}
+                
+                \includegraphics[height=.5\textheight]
+                {methode/web-scraping/SERP.jpg}
+                % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+                \label{img:voorbeeld}
+            \end{figure}
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \begin{figure}
+                \caption{HTML structuur}
+                
+                \includegraphics[height=.5\textheight]
+                {methode/web-scraping/serp-html.JPG}
+                % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+                \label{img:voorbeeld}
+            \end{figure}
+            \begin{listing}
+                \begin{lstlisting}
+                    <h3 style="font-weight:normal;margin:0;font-size:17px;line-height:20px;">
+                    <span style="fon...lign:2px">[HTML]</span>    
+                    <a href="https://www.s...8" class="gse_alrt_title" style="f...t:22px">
+                    The role of narcissistic personality <b>traits </b>in bullying behavior 
+                    in adolescence–A systematic review and meta-analysis
+                    </a>
+                    </h3>
+                \end{lstlisting}
+                \caption[Prompt HTML fragment]{HTML fragment van de titel van een publicatie.}
+                \label{code:HTMLcodefragment}
+            \end{listing}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Web scraping (2).}
+    \begin{columns}[c]
+        % create the column with the first image, that occupies
+        % half of the slide
+        \begin{column}{.5\textwidth}
+    \begin{itemize}
+        \item \href{https://github.com/bart-de-paepe/google-scholar-openai/blob/main/app/src/services/parse_service.py}{OpenAI (AKA ChatGPT)}
     
-    
+    \item \href{https://github.com/bart-de-paepe/google-scholar-beautifulsoup/blob/main/app/src/services/parse_service.py}{Beautiful Soup}
+\end{itemize}
+\end{column}
+\begin{column}{.5\textwidth}
+    \begin{figure}
+        \caption{LLM kostprijs}
+        
+        \includegraphics[height=.5\textheight]
+        {methode/web-scraping/openai_billing.png}
+        % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+        \label{img:voorbeeld}
+    \end{figure}
+\end{column}
+\end{columns}
 \end{frame}
 
 \begin{frame}
 \frametitle{Natural language processing.}
+\begin{itemize}
+    \item "Anna vertelde dat ze morgen naar de universiteit gaat omdat ze daar een belangrijk examen heeft."
+    \item "Anna vertelde dat Anna morgen naar de universiteit gaat omdat Anna daar een belangrijk examen heeft."
+    \item "Anna vertelde morgen universiteit gaat Anna belangrijk examen"
+    \item "Anna vertel morgen universiteit gaan Anna belangrijk examen"
+\end{itemize}
 
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Linked data.}
-
-
+\frametitle{Linked data (1).}
+\begin{columns}[c]
+    % create the column with the first image, that occupies
+    % half of the slide
+    \begin{column}{.5\textwidth}
+        \begin{figure}
+            \caption{DOI}
+            
+            \includegraphics[height=.5\textheight]
+            {methode/linked-data/DOI_Link.jpg}
+            % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+            \label{img:voorbeeld}
+        \end{figure}
+        
+\end{column}
+\begin{column}{.5\textwidth}
+    \begin{figure}
+        \caption{DOI}
+        
+        \includegraphics[height=.5\textheight]
+        {methode/linked-data/DOI_Crossref.jpg}
+        % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+        \label{img:voorbeeld}
+    \end{figure}
+\end{column}
+\end{columns}
 \end{frame}
 
 \begin{frame}
-\frametitle{Semantic search.}
+\frametitle{Linked data (2).}
+\begin{columns}[c]
+    % create the column with the first image, that occupies
+    % half of the slide
+    \begin{column}{.5\textwidth}
+        \begin{figure}
+            \caption{DOI}
+            
+            \includegraphics[height=.5\textheight]
+            {methode/linked-data/DOI_flow.jpg}
+            % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+            \label{img:voorbeeld}
+        \end{figure}
+    \end{column}
+    \begin{column}{.5\textwidth}
+        \begin{itemize}
+            \item een gewone HTML pagina
+            \item een PDF document
+            \item een webpagina met een embedded PDF document
+        \end{itemize}
+    \end{column}
+\end{columns}
+\end{frame}
 
+\begin{frame}
+\frametitle{Semantic search (1).}
+\begin{columns}[c]
+    % create the column with the first image, that occupies
+    % half of the slide
+    \begin{column}{.5\textwidth}
+        
+                \begin{figure}
+                    \caption{Google Scholar zoekresultaat}
+                    
+                    \includegraphics[height=.5\textheight]
+                    {methode/semantic-search/schrimp.jpg}
+                    % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+                    \label{img:voorbeeld}
+                \end{figure}
+            
+                
+            
+    \end{column}
+    \begin{column}{.5\textwidth}
+        \begin{figure}
+            \caption{publicatie in IMIS}
+            
+            \includegraphics[height=.5\textheight]
+            {methode/semantic-search/prawn.jpg}
+            % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+            \label{img:voorbeeld}
+        \end{figure}
+    \end{column}
+\end{columns}
+\url{https://www.youtube.com/watch?v=QSW2L8dkaZk}
+\end{frame}
 
+\begin{frame}
+\frametitle{Semantic search (2).}
+\begin{columns}[c]
+    % create the column with the first image, that occupies
+    % half of the slide
+    \begin{column}{.5\textwidth}
+        
+                \begin{figure}
+                    \caption{embeddings}
+                    
+                    \includegraphics[height=.5\textheight]
+                    {methode/semantic-search/word2vec2.jpg}
+                    % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+                    \label{img:voorbeeld}
+                \end{figure}
+            
+    \end{column}
+    \begin{column}{.5\textwidth}
+        \begin{figure}
+            \caption{schema}
+            
+            \includegraphics[height=.5\textheight]
+            {methode/semantic-search/embeddings.jpg}
+            % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+            \label{img:voorbeeld}
+        \end{figure}
+    \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Proof of Concept}
+    \begin{figure}
+        \caption{activity diagram}
+        
+        \includegraphics[height=.4\textheight]
+        {methode/activity-diagram.jpg}
+        % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+        \label{img:voorbeeld}
+    \end{figure}
+    
 \end{frame}
 
 \section{Resultaten.}
 
-\begin{frame}
-\frametitle{Resultaten.}
 
+\begin{frame}
+    \frametitle{Resultaten (1).}
+    \begin{columns}[c]
+        % create the column with the first image, that occupies
+        % half of the slide
+        \begin{column}{.5\textwidth}
+            \begin{figure}
+                \caption{Zoekresultaten voor VLIZ}
+                
+                \includegraphics[height=.5\textheight]
+                {resultaten/GS_alerts_timeline.png}
+                % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+                \label{img:voorbeeld}
+            \end{figure}
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \begin{itemize}
+                \item 23 alerts
+                \item 1-6 zoekresultaten per alert
+                \item 48\% van de zoekresultaten DOI
+            \end{itemize}
+        \end{column}
+    \end{columns}
+    
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultaten (2).}
+\begin{columns}[c]
+    % create the column with the first image, that occupies
+    % half of the slide
+    \begin{column}{.5\textwidth}
+        \begin{figure}
+            \caption{Use cases}
+            
+            \includegraphics[height=.5\textheight]
+            {resultaten/GS_alerts_auteurtijdschriftjaartal.jpg}
+            % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+            \label{img:voorbeeld}
+        \end{figure}
+    \end{column}
+    \begin{column}{.5\textwidth}
+        \begin{table}[h!]
+            \tiny
+            \caption{e-mail 25-04-24}
+            \centering
+            \begin{tabularx}{\textwidth}{|p{4cm}|X|} 
+                \hline
+                \multicolumn{2}{|X|}{\textbf{zoekresultaat}} \\
+                \hline
+                web &\textbf{titel}: VLIZ Jaarverslag voor Schenkers 2024\\
+                scraping&\textbf{link}: https://www.vliz.be/projects/trophos/\\&imis.php?module\textbackslash x3dref\textbackslash x26refid\textbackslash x3d406498\\
+                &\textbf{auteur}: VLIZ\\
+                &\textbf{tijdschrift}: -\\
+                &\textbf{jaar}: -\\
+                &\textbf{tekst}: Zee als Goed Doel ontving in 2024 als eerste wereldwijd de erkenning als Grant Making Facility ter ondersteuning van het Decennium van Oceaanwetenschappen voor Duurzame Ontwikkeling (2021-2030). Dit stelt De Zee als Goed Doel in staat …\\
+                \hline
+                NLP&\textbf{relevantiescore}: 0.250753012935632\\
+                \hline
+                DOI&\textbf{DOI}: -\\
+                &\textbf{bron}: -\\
+                \hline
+                semantic&\textbf{semantic search score}: 0.8377995491027832\\
+                search&\\
+                \hline
+            \end{tabularx}
+            \label{table:email20250424}
+        \end{table}
+    \end{column}
+\end{columns}
 
 \end{frame}
 
@@ -192,6 +444,12 @@
 
 \begin{frame}
 \frametitle{Discussie.}
+\begin{itemize}
+    \item Het automatisch opzoeken van de DOI is de grootste meerwaarde van de tool.
+    \item Gebruikers kunnen focussen op publicaties zonder DOI en/of met een lage relevantiescore.
+    \item 1500-200 publicaties per jaar: 5-6 VTE
+    \item Met de tool potentiële verlaging tot 2-3 VTE
+    \end{itemize}
 
 
 \end{frame}
@@ -200,8 +458,25 @@
 
 \begin{frame}
 \frametitle{Conclusie.}
+\begin{itemize}
+    \item Tool zal gebruikt worden binnen het VLIZ.
+    \item Korte termijn: Verbeteringen door meer gelinkte data (auteurs, tijdschriften) op te zoeken in IMIS.
+    \item Lange termijn: Uitvoerige tests met LLMs (is niet onderhevig aande structuur van de HTML)
+\end{itemize}
 
+\end{frame}
 
+\begin{frame}
+    \frametitle{Woord van dank.}
+    \begin{itemize}
+        \item Bart Vanhoorne
+        \item Milan Lamote
+        \item Jan Claes
+        \item Fons Verheyde
+        \item Cedric Decruw
+        \item Lies Knockaert
+    \end{itemize}
+    
 \end{frame}
 
 \end{document}
