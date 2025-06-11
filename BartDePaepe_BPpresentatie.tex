@@ -118,22 +118,33 @@
     
 \end{frame}
 
-{
-    \setbeamertemplate{background}[pure]%
-    {kader/amin-zabardast-Q57aftqNKiE-unsplash.jpg}
-\begin{frame}[b]{Title}
+
+\begin{frame}[t]{Title}
     \frametitle{Het probleem.}
+    \begin{minipage}[t][0.8015\textheight]{\textwidth}
+    \begin{figure}
+        
+        
+        \includegraphics[height=.5\textheight]
+        {kader/amin-zabardast-Q57aftqNKiE-unsplash.jpg}
+        % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+        
+    \end{figure}
+    
+    \vspace{\fill}% or \vfill
     \tiny
     Photo by Amin Zabardast on https://unsplash.com/photos/a-street-sign-on-a-pole-next-to-a-building-Q57aftqNKiE
     
     
+    \end{minipage}
+    
 \end{frame}
-}
+
 
 \begin{frame}
     \frametitle{De onderzoeksvraag.}
-    \small
-    ``Hoe kunnen de zoekresultaten van Google Scholar automatisch toegevoegd worden aan IMIS?''
+    \tiny
+    \colorbox{hgorange}{``Hoe kunnen de zoekresultaten van Google Scholar automatisch toegevoegd worden aan IMIS?''}
     \begin{itemize}
         \item Hoe kunnen de uiteenlopende zoekresultaten van Google Scholar omgezet worden in gestructureerde data?
         \item Zijn alle zoekresultaten uniek identificeerbaar zodat er geen duplicaten opgeslagen worden?
@@ -235,10 +246,10 @@
 \begin{frame}
 \frametitle{Natural language processing.}
 \begin{itemize}
-    \item "Anna vertelde dat ze morgen naar de universiteit gaat omdat ze daar een belangrijk examen heeft."
-    \item "Anna vertelde dat Anna morgen naar de universiteit gaat omdat Anna daar een belangrijk examen heeft."
-    \item "Anna vertelde morgen universiteit gaat Anna belangrijk examen"
-    \item "Anna vertel morgen universiteit gaan Anna belangrijk examen"
+    \item "Bart vertelde dat hij morgen naar de hogeschool gaat omdat hij daar een belangrijk examen heeft."
+    \item "Bart vertelde dat Bart morgen naar de hogeschool gaat omdat Bart daar een belangrijk examen heeft."
+    \item "Bart vertelde morgen hogeschool gaat Bart belangrijk examen"
+    \item "Bart vertel morgen hogeschool gaan Bart belangrijk examen"
 \end{itemize}
 
 
@@ -308,7 +319,7 @@
 
 \begin{frame}[t]{Title}
 \frametitle{Semantic search (1).}
-\begin{minipage}[t][0.8715\textheight]{\textwidth}
+\begin{minipage}[t][0.8015\textheight]{\textwidth}
     \begin{columns}[c]
         % create the column with the first image, that occupies
         % half of the slide
@@ -357,27 +368,29 @@
 \begin{columns}[c]
     % create the column with the first image, that occupies
     % half of the slide
-    \begin{column}{.5\textwidth}
-        
+    \begin{column}{.3\textwidth}
+        \centering
                 \begin{figure}
-                    \caption{embeddings}
+                    
                     
                     \includegraphics[height=.5\textheight]
                     {methode/semantic-search/word2vec2.jpg}
                     % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-                    \label{img:voorbeeld}
+                    
                 \end{figure}
-            
+            embeddings
     \end{column}
-    \begin{column}{.5\textwidth}
+    \begin{column}{.8\textwidth}
+        \centering
         \begin{figure}
-            \caption{schema}
             
-            \includegraphics[height=.5\textheight]
+            
+            \includegraphics[height=.4\textheight]
             {methode/semantic-search/embeddings.jpg}
             % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-            \label{img:voorbeeld}
+            
         \end{figure}
+        schema
     \end{column}
 \end{columns}
 \end{frame}
@@ -385,12 +398,12 @@
 \begin{frame}
     \frametitle{Proof of Concept}
     \begin{figure}
-        \caption{activity diagram}
         
-        \includegraphics[height=.4\textheight]
+        
+        \includegraphics[width=0.35\textwidth]
         {methode/activity-diagram.jpg}
         % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-        \label{img:voorbeeld}
+        
     \end{figure}
     
 \end{frame}
@@ -403,21 +416,24 @@
     \begin{columns}[c]
         % create the column with the first image, that occupies
         % half of the slide
+        
         \begin{column}{.5\textwidth}
+            \centering
             \begin{figure}
-                \caption{Zoekresultaten voor VLIZ}
+                
                 
                 \includegraphics[height=.5\textheight]
                 {resultaten/GS_alerts_timeline.png}
                 % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-                \label{img:voorbeeld}
+                
             \end{figure}
+            Zoekresultaten voor de zoekopdracht ``VLIZ''
         \end{column}
         \begin{column}{.5\textwidth}
             \begin{itemize}
                 \item 23 alerts
                 \item 1-6 zoekresultaten per alert
-                \item 48\% van de zoekresultaten DOI
+                \item 48\% van de zoekresultaten levert DOI op
             \end{itemize}
         \end{column}
     \end{columns}
@@ -431,43 +447,62 @@
     % half of the slide
     \begin{column}{.5\textwidth}
         \begin{figure}
-            \caption{Use cases}
+            
             
             \includegraphics[height=.5\textheight]
             {resultaten/GS_alerts_auteurtijdschriftjaartal.jpg}
             % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-            \label{img:voorbeeld}
+            
         \end{figure}
     \end{column}
     \begin{column}{.5\textwidth}
-        \begin{table}[h!]
-            \tiny
-            \caption{e-mail 25-04-24}
-            \centering
-            \begin{tabularx}{\textwidth}{|p{4cm}|X|} 
-                \hline
-                \multicolumn{2}{|X|}{\textbf{zoekresultaat}} \\
-                \hline
-                web &\textbf{titel}: VLIZ Jaarverslag voor Schenkers 2024\\
-                scraping&\textbf{link}: https://www.vliz.be/projects/trophos/\\&imis.php?module\textbackslash x3dref\textbackslash x26refid\textbackslash x3d406498\\
-                &\textbf{auteur}: VLIZ\\
-                &\textbf{tijdschrift}: -\\
-                &\textbf{jaar}: -\\
-                &\textbf{tekst}: Zee als Goed Doel ontving in 2024 als eerste wereldwijd de erkenning als Grant Making Facility ter ondersteuning van het Decennium van Oceaanwetenschappen voor Duurzame Ontwikkeling (2021-2030). Dit stelt De Zee als Goed Doel in staat …\\
-                \hline
-                NLP&\textbf{relevantiescore}: 0.250753012935632\\
-                \hline
-                DOI&\textbf{DOI}: -\\
-                &\textbf{bron}: -\\
-                \hline
-                semantic&\textbf{semantic search score}: 0.8377995491027832\\
-                search&\\
-                \hline
-            \end{tabularx}
-            \label{table:email20250424}
-        \end{table}
+        
+            \begin{table}
+                \tiny
+                \begin{tabular}{l{3cm}l}
+                    \toprule
+                    web & \textbf{titel}: VLIZ Jaarverslag voor Schenkers 2024 \\
+                    
+                    scraping & \textbf{link}: https://www.vliz.be/projects/trophos/\\&imis.php?module\textbackslash x3dref\textbackslash x26refid\textbackslash x3d406498 \\
+                    &\textbf{auteur}: J Mees, C Martens, K Rappé\\
+                    &\textbf{tijdschrift}: VLIZ Jaarverslag voor schenkers\\
+                    &\textbf{jaar}: 2025\\
+                    &\textbf{tekst}: Zee als Goed Doel ontving in 2024 als eerste wereldwijd de erkenning als Grant Making Facility ter ondersteuning van het Decennium van Oceaanwetenschappen voor Duurzame Ontwikkeling (2021-2030). Dit stelt De Zee als Goed Doel in staat …\\
+                    \midrule
+                    NLP&\textbf{relevantiescore}: 0.250753012935632 \\
+                    \midrule
+                    DOI&\textbf{DOI}: -\\
+                    &\textbf{bron}: -\\
+                    \midrule
+                    semantic&\textbf{semantic search score}: 0.8377995491027832\\
+                    search&\\
+                    \bottomrule
+                \end{tabular}
+                
+                
+            \end{table}
+            
+        
     \end{column}
 \end{columns}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultaten (3).}
+
+        
+        \begin{figure}
+            
+            
+            \includegraphics[height=.8\textheight]
+            {resultaten/vergelijking_scraping.jpg}
+            % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+            
+        \end{figure}
+        
+        
+   
 
 \end{frame}
 
@@ -490,9 +525,9 @@
 \begin{frame}
 \frametitle{Conclusie.}
 \begin{itemize}
-    \item Tool zal gebruikt worden binnen het VLIZ.
-    \item Korte termijn: Verbeteringen door meer gelinkte data (auteurs, tijdschriften) op te zoeken in IMIS.
-    \item Lange termijn: Uitvoerige tests met LLMs (is niet onderhevig aande structuur van de HTML)
+    \item De tool zal gebruikt worden binnen het VLIZ.
+    \item Korte termijn: Verbetering van de tool door meer gelinkte data (auteurs, tijdschriften) op te zoeken in IMIS.
+    \item Lange termijn: Uitvoerige tests met LLMs (zijn niet onderhevig aan de structuur van de HTML)
 \end{itemize}
 
 \end{frame}
