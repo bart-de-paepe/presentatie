@@ -23,6 +23,7 @@
 \usepackage{multirow,multicol} % Tabelcellen samenvoegen
 \usepackage{eurosym}           % Euro symbool
 \usepackage{hyperref}
+\usepackage{bbding}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -119,28 +120,6 @@
 \end{frame}
 
 
-\begin{frame}[t]{Title}
-    \frametitle{Het probleem.}
-    \begin{minipage}[t][0.8015\textheight]{\textwidth}
-    \begin{figure}
-        
-        
-        \includegraphics[height=.5\textheight]
-        {kader/amin-zabardast-Q57aftqNKiE-unsplash.jpg}
-        % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-        
-    \end{figure}
-    
-    \vspace{\fill}% or \vfill
-    \tiny
-    Photo by Amin Zabardast on https://unsplash.com/photos/a-street-sign-on-a-pole-next-to-a-building-Q57aftqNKiE
-    
-    
-    \end{minipage}
-    
-\end{frame}
-
-
 \begin{frame}
     \frametitle{De onderzoeksvraag.}
     \tiny
@@ -162,17 +141,9 @@
     
 \end{frame}
 
-\begin{frame}
-    \frametitle{Proof of Concept bouwen.}
-    Geen grappige afbeelding met auteursrechten hier, wel \href{https://www.slideserve.com/zocha/agile-project-management}{daar}.
-    
-    
-    
-\end{frame}
-
 {
     \setbeamertemplate{background}[pure]{methode/arrow.png}
-\section{Methode.}
+\section{Proof of \linebreak Concept.}
 }
 
 \begin{frame}[t]
@@ -192,17 +163,20 @@
             
         \end{column}
         \begin{column}{.5\textwidth}
-            \begin{figure}
-                
-                
-                \includegraphics[height=.3\textheight]
-                {methode/web-scraping/serp-html.JPG}
-                % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-                
-            \end{figure}
             
             \begin{listing}
-                \begin{lstlisting}
+                
+                    \tiny
+                    messages=[
+                    {"role": "system",
+                        "content": "You are a master at scraping Google Scholar results data. Scrape top 10 organic results data from Google Scholar search result page."},
+                    ],
+                
+                
+            \end{listing}
+            \vspace{1cm}
+            \begin{listing}
+                
                     \tiny
                     <h3 style="font-weight:normal;margin:0;font-size:17px;line-height:20px;">
                     <span style="fon...lign:2px">[HTML]</span>    
@@ -211,7 +185,10 @@
                     in adolescence–A systematic review and meta-analysis
                     </a>
                     </h3>
-                \end{lstlisting}
+                    <div \colorbox{hgorange}{class="gse\_alrt\_sni"} style=3D"line-height:17px">The Ocean Race, known as one of the world most challenging round-the-world <br>
+                    sailing competitions, has evolved into a significant platform for ocean science, <br>
+                    advocacy, and innovation. Through its Science Program, The Race leverages its...</div>
+                
                 
             \end{listing}
         \end{column}
@@ -225,10 +202,12 @@
         % half of the slide
         \begin{column}{.5\textwidth}
     \begin{itemize}
-        \item \href{https://github.com/bart-de-paepe/google-scholar-openai/blob/main/app/src/services/parse_service.py}{OpenAI (AKA ChatGPT)}
-    
-    \item \href{https://github.com/bart-de-paepe/google-scholar-beautifulsoup/blob/main/app/src/services/parse_service.py}{Beautiful Soup}
-\end{itemize}
+        \item \XSolidBrush OpenAI (AKA ChatGPT)
+        \item \XSolidBrush Anthropic (met Mirascope)
+        \item \XSolidBrush Llama 3 (met Ollama)
+        \item \XSolidBrush Serpapi
+        \item \Checkmark Beautiful Soup
+    \end{itemize}
 \end{column}
 \begin{column}{.5\textwidth}
     \begin{figure}
@@ -246,55 +225,30 @@
 \begin{frame}
 \frametitle{Natural language processing.}
 \begin{itemize}
-    \item "Bart vertelde dat hij morgen naar de hogeschool gaat omdat hij daar een belangrijk examen heeft."
-    \item "Bart vertelde dat Bart morgen naar de hogeschool gaat omdat Bart daar een belangrijk examen heeft."
-    \item "Bart vertelde morgen hogeschool gaat Bart belangrijk examen"
-    \item "Bart vertel morgen hogeschool gaan Bart belangrijk examen"
+    \item \colorbox{hgorange}{zoekterm: Bart}
+    \item ``Bart vertelde dat hij morgen naar de hogeschool gaat omdat hij daar een belangrijk examen heeft.''
+    \item ``Bart vertelde dat Bart morgen naar de hogeschool gaat omdat Bart daar een belangrijk examen heeft.''
+    \item ``Bart vertelde morgen hogeschool gaat Bart belangrijk examen''
 \end{itemize}
+\begin{enumerate}
+    \item \colorbox{hgorange}{``Bart vertel morgen hogeschool gaan Bart belangrijk examen''}
+    \item ``adres hogeschool is Schoonmeersen''
+    \item ``laatste examen Bart''
+    \end{enumerate}
+    \colorbox{hgorange}{relevantiescore: 0,36}
+
 
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Linked data (1).}
+\frametitle{Linked data.}
 \begin{columns}[c]
     % create the column with the first image, that occupies
     % half of the slide
     \begin{column}{.5\textwidth}
         \centering
-        \begin{figure}
-            
-            
-            \includegraphics[height=.5\textheight]
-            {methode/linked-data/DOI_Link.jpg}
-            % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-            
-        \end{figure}
-        DOI in de URL \& op de webpagina
-        
-\end{column}
-\begin{column}{.5\textwidth}
-    \centering
-    \begin{figure}
-        
-        
-        \includegraphics[height=.5\textheight]
-        {methode/linked-data/DOI_Crossref.jpg}
-        % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-        
-    \end{figure}
-    DOI in Crossref
-\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}
-\frametitle{Linked data (2).}
-\begin{columns}[c]
-    % create the column with the first image, that occupies
-    % half of the slide
-    \begin{column}{.5\textwidth}
-        \centering
+        \[https://pubs.acs.org/doi/full/10.1021/acsami.4c21991\]
         \begin{figure}
             
             
@@ -303,7 +257,6 @@
             % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
             
         \end{figure}
-        flowchart om de DOI op te zoeken
     \end{column}
     \begin{column}{.5\textwidth}
         \centering
@@ -318,7 +271,7 @@
 \end{frame}
 
 \begin{frame}[t]{Title}
-\frametitle{Semantic search (1).}
+\frametitle{Semantic search.}
 \begin{minipage}[t][0.8015\textheight]{\textwidth}
     \begin{columns}[c]
         % create the column with the first image, that occupies
@@ -363,50 +316,7 @@
 
 \end{frame}
 
-\begin{frame}
-\frametitle{Semantic search (2).}
-\begin{columns}[c]
-    % create the column with the first image, that occupies
-    % half of the slide
-    \begin{column}{.3\textwidth}
-        \centering
-                \begin{figure}
-                    
-                    
-                    \includegraphics[height=.5\textheight]
-                    {methode/semantic-search/word2vec2.jpg}
-                    % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-                    
-                \end{figure}
-            embeddings
-    \end{column}
-    \begin{column}{.8\textwidth}
-        \centering
-        \begin{figure}
-            
-            
-            \includegraphics[height=.4\textheight]
-            {methode/semantic-search/embeddings.jpg}
-            % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-            
-        \end{figure}
-        schema
-    \end{column}
-\end{columns}
-\end{frame}
 
-\begin{frame}
-    \frametitle{Proof of Concept}
-    \begin{figure}
-        
-        
-        \includegraphics[width=0.35\textwidth]
-        {methode/activity-diagram.jpg}
-        % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-        
-    \end{figure}
-    
-\end{frame}
 
 \section{Resultaten.}
 
@@ -544,5 +454,108 @@
     \end{itemize}
     
 \end{frame}
+
+\section{Extra slides}
+
+\begin{frame}[t]{Title}
+    \frametitle{Het probleem.}
+    \begin{minipage}[t][0.8015\textheight]{\textwidth}
+        \begin{figure}
+            
+            
+            \includegraphics[height=.5\textheight]
+            {kader/amin-zabardast-Q57aftqNKiE-unsplash.jpg}
+            % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+            
+        \end{figure}
+        
+        \vspace{\fill}% or \vfill
+        \tiny
+        Photo by Amin Zabardast on https://unsplash.com/photos/a-street-sign-on-a-pole-next-to-a-building-Q57aftqNKiE
+        
+        
+    \end{minipage}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Linked data (1).}
+    \begin{columns}[c]
+        % create the column with the first image, that occupies
+        % half of the slide
+        \begin{column}{.5\textwidth}
+            \centering
+            \begin{figure}
+                
+                
+                \includegraphics[height=.5\textheight]
+                {methode/linked-data/DOI_Link.jpg}
+                % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+                
+            \end{figure}
+            DOI in de URL \& op de webpagina
+            
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \centering
+            \begin{figure}
+                
+                
+                \includegraphics[height=.5\textheight]
+                {methode/linked-data/DOI_Crossref.jpg}
+                % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+                
+            \end{figure}
+            DOI in Crossref
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Semantic search (2).}
+    \begin{columns}[c]
+        % create the column with the first image, that occupies
+        % half of the slide
+        \begin{column}{.3\textwidth}
+            \centering
+            \begin{figure}
+                
+                
+                \includegraphics[height=.5\textheight]
+                {methode/semantic-search/word2vec2.jpg}
+                % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+                
+            \end{figure}
+            embeddings
+        \end{column}
+        \begin{column}{.8\textwidth}
+            \centering
+            \begin{figure}
+                
+                
+                \includegraphics[height=.4\textheight]
+                {methode/semantic-search/embeddings.jpg}
+                % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+                
+            \end{figure}
+            schema
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Proof of Concept}
+    \begin{figure}
+        
+        
+        \includegraphics[width=0.35\textwidth]
+        {methode/activity-diagram.jpg}
+        % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+        
+    \end{figure}
+    
+\end{frame}
+
 
 \end{document}
