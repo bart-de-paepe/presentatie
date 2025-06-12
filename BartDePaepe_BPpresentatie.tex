@@ -24,6 +24,7 @@
 \usepackage{eurosym}           % Euro symbool
 \usepackage{hyperref}
 \usepackage{bbding}
+\usepackage{tabularx}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -78,12 +79,13 @@
 
 \begin{frame}
     \frametitle{Integrated Marine Information System}
-    \href{https://www.vliz.be/nl/imis}{\begin{figure}
-            \includegraphics[height=.4\textheight]
+    \begin{figure}
+            \includegraphics[height=.5\textheight]
             {kader/imis.jpg}
             % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-    \end{figure}}
-    
+    \end{figure}
+    \centering
+    \url{https://www.vliz.be/nl/imis}
     
 \end{frame}
 
@@ -147,7 +149,7 @@
 }
 
 \begin{frame}[t]
-    \frametitle{Web scraping (1).}
+    \frametitle{Web scraping (1/2).}
     \begin{columns}[t]
         % create the column with the first image, that occupies
         % half of the slide
@@ -196,7 +198,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Web scraping (2).}
+    \frametitle{Web scraping (2/2).}
     \begin{columns}[c]
         % create the column with the first image, that occupies
         % half of the slide
@@ -322,7 +324,7 @@
 
 
 \begin{frame}
-    \frametitle{Resultaten (1).}
+    \frametitle{Resultaten (1/4).}
     \begin{columns}[c]
         % create the column with the first image, that occupies
         % half of the slide
@@ -343,49 +345,77 @@
             \begin{itemize}
                 \item 23 alerts
                 \item 1-6 zoekresultaten per alert
-                \item 48\% van de zoekresultaten levert DOI op
+                \item 18\% van de zoekresultaten zijn volledig
             \end{itemize}
+            \begin{figure}
+                
+                
+                \includegraphics[height=.2\textheight]
+                {resultaten/GS_alerts_auteurtijdschriftjaartal.jpg}
+                % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+                
+            \end{figure}
         \end{column}
     \end{columns}
     
 \end{frame}
 
 \begin{frame}
-\frametitle{Resultaten (2).}
+\frametitle{Resultaten (2/4).}
+
+
+\begin{figure}
+    
+    
+    \includegraphics[height=.8\textheight]
+    {resultaten/vergelijking_scraping.jpg}
+    % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+    
+\end{figure}
+
+
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultaten (3/4).}
 \begin{columns}[c]
     % create the column with the first image, that occupies
     % half of the slide
     \begin{column}{.5\textwidth}
+        \centering
+        relevantiescore
         \begin{figure}
             
             
-            \includegraphics[height=.5\textheight]
-            {resultaten/GS_alerts_auteurtijdschriftjaartal.jpg}
+            \includegraphics[height=.3\textheight]
+            {resultaten/GS_alerts_relevantiescore.png}
             % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
             
         \end{figure}
     \end{column}
     \begin{column}{.5\textwidth}
-        
+        \centering
+        DOI
             \begin{table}
                 \tiny
-                \begin{tabular}{l{3cm}l}
+                \begin{tabular}{ll{3cm}}
                     \toprule
-                    web & \textbf{titel}: VLIZ Jaarverslag voor Schenkers 2024 \\
-                    
-                    scraping & \textbf{link}: https://www.vliz.be/projects/trophos/\\&imis.php?module\textbackslash x3dref\textbackslash x26refid\textbackslash x3d406498 \\
-                    &\textbf{auteur}: J Mees, C Martens, K Rappé\\
-                    &\textbf{tijdschrift}: VLIZ Jaarverslag voor schenkers\\
-                    &\textbf{jaar}: 2025\\
-                    &\textbf{tekst}: Zee als Goed Doel ontving in 2024 als eerste wereldwijd de erkenning als Grant Making Facility ter ondersteuning van het Decennium van Oceaanwetenschappen voor Duurzame Ontwikkeling (2021-2030). Dit stelt De Zee als Goed Doel in staat …\\
+                    & VLIZ & IMIS \\
+                    & dataset & dataset \\
                     \midrule
-                    NLP&\textbf{relevantiescore}: 0.250753012935632 \\
+                    Percentage aantal keer dat de  & 48\% & 62,7\% \\
+                    DOI gevonden is. &  & \\
                     \midrule
-                    DOI&\textbf{DOI}: -\\
-                    &\textbf{bron}: -\\
-                    \midrule
-                    semantic&\textbf{semantic search score}: 0.8377995491027832\\
-                    search&\\
+                    \CircleSolid Percentage aantal keer dat  &7\% & \\
+                    de DOI in de URL staat. & & \\
+                    \CircleSolid Percentage aantal keer dat &20\% & \\
+                    de DOI via Crossref gevonden wordt. & \\
+                    \CircleSolid Percentage aantal keer dat &73\% & \\
+                     de DOI op webpagina staat. & \\
+                     \midrule
+                     Referentiepercentage DOI & & 61\% \\
                     \bottomrule
                 \end{tabular}
                 
@@ -399,21 +429,54 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Resultaten (3).}
-
+    \frametitle{Resultaten (4/4).}
+    \begin{columns}[c]
+        % create the column with the first image, that occupies
+        % half of the slide
         
-        \begin{figure}
+        \begin{column}{.5\textwidth}
+            \centering
+            semantic search score
+            \begin{figure}
+                
+                
+                \includegraphics[height=.3\textheight]
+                {resultaten/GS_alerts_semanticsearchscore.png}
+                % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+                
+            \end{figure}
             
-            
-            \includegraphics[height=.8\textheight]
-            {resultaten/vergelijking_scraping.jpg}
-            % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-            
-        \end{figure}
-        
-        
-   
-
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \begin{table}
+                \tiny
+                \begin{tabularx}{\textwidth}{|X|p{1cm}|} 
+                    \hline
+                    \textbf{Titel}&\textbf{Semantic search score}\\
+                    \hline
+                    Genome-wide association study revealed candidate genes associated with egg-laying time traits in layer chicken&\textcolor{orange}{1.0}\\
+                    \hline
+                    Genome wide association study revealed candidate genes associated with egg laying time traits in layer chicken&\textcolor{orange}{0.99581}\\
+                    \hline
+                    Gen. wide assoc. study revealed candidate genes associated with egg time traits in layer chicken&\textcolor{orange}{0.970841}\\
+                    \hline
+                    Genome-wide association study revealed candidate genes associated with egg-laying time traits&\textcolor{orange}{0.954331}\\
+                    \hline
+                    ... & \textcolor{orange}{\textbf{0.9}}\\
+                    \hline
+                    Genome-wide association study revealed some new candidate genes associated with flowering and maturity time of soybean in Central and West Siberian regions of Russia&0.81463\\
+                    \hline
+                    Genome- and Exome-Wide Association Studies Revealed Candidate Genes Associated with DaTscan Imaging Features&0.79323\\
+                    \hline
+                    ... &  ... \\
+                    \hline
+                \end{tabularx}
+                
+                
+            \end{table}
+        \end{column}
+    \end{columns}
+    
 \end{frame}
 
 \section{Discussie.}
@@ -423,8 +486,8 @@
 \begin{itemize}
     \item Het automatisch opzoeken van de DOI is de grootste meerwaarde van de tool.
     \item Gebruikers kunnen focussen op publicaties zonder DOI en/of met een lage relevantiescore.
-    \item 1500-200 publicaties per jaar: 5-6 VTE
-    \item Met de tool potentiële verlaging tot 2-3 VTE
+    \item 1500-2000 publicaties per jaar: 5-6 maanden
+    \item Met de tool potentiële verlaging tot 2-3 maanden
     \end{itemize}
 
 
@@ -455,28 +518,9 @@
     
 \end{frame}
 
-\section{Extra slides}
+% Extra slides
 
-\begin{frame}[t]{Title}
-    \frametitle{Het probleem.}
-    \begin{minipage}[t][0.8015\textheight]{\textwidth}
-        \begin{figure}
-            
-            
-            \includegraphics[height=.5\textheight]
-            {kader/amin-zabardast-Q57aftqNKiE-unsplash.jpg}
-            % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-            
-        \end{figure}
-        
-        \vspace{\fill}% or \vfill
-        \tiny
-        Photo by Amin Zabardast on https://unsplash.com/photos/a-street-sign-on-a-pole-next-to-a-building-Q57aftqNKiE
-        
-        
-    \end{minipage}
-    
-\end{frame}
+
 
 \begin{frame}
     \frametitle{Linked data (1).}
