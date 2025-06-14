@@ -42,7 +42,7 @@
 
 \title[Korte titel]{Google Scholar zoekresultaten voor wetenschappelijke projecten: linked data \& natural language processing}
 \author{Bart De Paepe}
-\date{\today}
+\date{16 juni 2025}
 
 %==============================================================================
 % Inhoud presentatie
@@ -231,17 +231,17 @@
 \begin{frame}
 \frametitle{Natural language processing.}
 \begin{itemize}
-    \item \colorbox{hgorange}{zoekterm: Bart}
-    \item ``Bart vertelde dat hij morgen naar de hogeschool gaat omdat hij daar een belangrijk examen heeft.''
-    \item ``Bart vertelde dat Bart morgen naar de hogeschool gaat omdat Bart daar een belangrijk examen heeft.''
-    \item ``Bart vertelde morgen hogeschool gaat Bart belangrijk examen''
-\end{itemize}
-\begin{enumerate}
-    \item \colorbox{hgorange}{``Bart vertel morgen hogeschool gaan Bart belangrijk examen''}
-    \item ``adres hogeschool is Schoonmeersen''
-    \item ``is laatste examen Bart''
+    \item ``Het \colorbox{hgorange}{VLIZ} verwelkomt nieuwsgierige particulieren en kleine groepen voor een bezoek aan haar Campus en haar Mariene Station Oostende.''
+    \item \begin{enumerate}
+        \item Coreference resolution
+        \item Stopwoorden
+        \item Lemmatisering
     \end{enumerate}
-    \colorbox{hgorange}{relevantiescore: 0,36}
+    \item ``\colorbox{hgorange}{VLIZ} verwelkom nieuwsgierig particulier klein groep bezoek \colorbox{hgorange}{VLIZ} Campus \colorbox{hgorange}{VLIZ} Marien Station Oostende.''
+\end{itemize}
+\[
+relevantiescore = frequentie \ast log\left(\frac{totaal \hspace{1mm} aantal \hspace{1mm}  zoekresultaten}{aantal \hspace{1mm}  zoekresultaten \hspace{1mm}  waar \hspace{1mm}  term \hspace{1mm}  voorkomt}\right)
+\] 
 
 
 
@@ -276,20 +276,19 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[t]{Title}
+\begin{frame}
 \frametitle{Semantic search.}
-\begin{minipage}[t][0.8015\textheight]{\textwidth}
+
     \begin{columns}[c]
         % create the column with the first image, that occupies
         % half of the slide
-        \begin{column}{.5\textwidth}
+        \begin{column}{.7\textwidth}
             \centering
-            Google Scholar zoekresultaat
             \begin{figure}
                 
                 
-                \includegraphics[height=.5\textheight]
-                {methode/semantic-search/schrimp.jpg}
+                \includegraphics[height=.38\textheight]
+                {methode/semantic-search/embeddings.jpg}
                 % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
                 
             \end{figure}
@@ -297,28 +296,21 @@
             
             
         \end{column}
-        \begin{column}{.5\textwidth}
+        \begin{column}{.3\textwidth}
             \centering
-            publicatie in IMIS
             \begin{figure}
                 
                 
                 \includegraphics[height=.5\textheight]
-                {methode/semantic-search/prawn.jpg}
+                {methode/semantic-search/word2vec2.jpg}
                 % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
                 
             \end{figure}
         \end{column}
     \end{columns}
-    \url{https://www.youtube.com/watch?v=QSW2L8dkaZk}
-    
-    \vspace{\fill}% or \vfill
-    \tiny
-    Photo by Yasmine Duchesne on https://unsplash.com/photos/clear-footed-glass-with-red-and-yellow-liquid-on-table-VSb6KDaiga0
-    Photo by Farhad Ibrahimzade on https://unsplash.com/photos/cooked-food-on-black-ceramic-bowl-HNmcgpzPHag
     
     
-\end{minipage}
+
 
 \end{frame}
 
